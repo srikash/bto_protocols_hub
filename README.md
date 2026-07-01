@@ -1,30 +1,92 @@
-# BRAIN-To MRI Protocols Repository
-This is a repository of wiki, code and containers for processing data acquired using the BRAIN-TO imaging protocols on Siemens MAGNETOM Prisma 3 T (XA30).
+# BRAIN-TO MRI Protocols
 
-Please refer the article titled, [Advancing Clinical and Neuroscientific Research Through Accessible and Optimized Protocol Design at 3T](https://marketing.webassets.siemens-healthineers.com/ed15b22a01ec5497/ef408bcafa80/siemens-healthineers-magnetom-world-Kashyap_Uludag_BRAIN-TO_protocols.pdf), published in the RSNA Edition of Siemens MAGNETOM Flash (2023) for an overview.
+A collection of optimised MRI scanning protocols for the Siemens MAGNETOM Prisma 3T (XA30 software), developed by the [BRAIN-TO Lab](https://uhndata.io/brain-to/) at the Krembil Brain Institute, University Health Network, Toronto.
 
-![](misc/fig/MAGNETOM_Flash_Figure_2.png)
+![MAGNETOM Flash Figure 2](docs/fig/MAGNETOM_Flash_Figure_2.png)
 
-#### Download Links for BRAIN-TO Protocols
-1. Complete Set <br /> [https://zenodo.org/records/10685481](https://zenodo.org/records/10685481)
+> Refer to [Advancing Clinical and Neuroscientific Research Through Accessible and Optimized Protocol Design at 3T](https://marketing.webassets.siemens-healthineers.com/ed15b22a01ec5497/ef408bcafa80/siemens-healthineers-magnetom-world-Kashyap_Uludag_BRAIN-TO_protocols.pdf), Siemens MAGNETOM Flash (RSNA Edition, 2023) for a full overview.
 
-2. Anatomy Set <br /> [https://zenodo.org/records/10685475](https://zenodo.org/records/10685475)
+---
 
-3. fMRI Set <br /> [https://zenodo.org/records/10685458](https://zenodo.org/records/10685458)
+## What is this?
 
-4. Diffusion Set <br /> [https://zenodo.org/records/10685449](https://zenodo.org/records/10685449)
+This repository provides:
+- **Protocol files** for download from Zenodo (`.exar1` for XA30, PDF parameter sheets for other software versions)
+- **Processing pipelines** as Docker containers — no local installation needed
+- **Helper scripts** for individual processing steps (fieldmap correction, distortion correction, registration)
+- **Issue templates** so you can report problems or ask questions in a structured way
 
-5. ASL Set <br /> [https://zenodo.org/records/10685308](https://zenodo.org/records/10685308)
+---
 
-#### This repository is being updated steadily and include the following 
-1. ~~Zenodo links for XA30 exar1 files~~
-2. ~~Zenodo links for Protocol PDFs (for translating to other Prisma software versions)~~
-3. Wiki with recommended pipelines and tools
-4. Adding scripts and example code for processing data
+## Available Protocols
 
-#### Please feel free to contribute to our efforts. 
-For urgent requests, please [e-mail](mailto:sriranga.kashyap@uhn.ca).
+Download the protocol set that matches your imaging needs:
 
-#### Contributors
-Sriranga Kashyap, BRAIN-To Lab, Krembil Brain Institute, UHN<br />
-Yuexin Xi, PhD Student, Dept. of Medical Biophysics, University of Toronto
+| Protocol Set | Modalities | Download |
+|---|---|---|
+| Complete Set | All below | [zenodo.org/records/10685481](https://zenodo.org/records/10685481) |
+| Anatomy Set | T1w, T2w, FLAIR, MWF | [zenodo.org/records/10685475](https://zenodo.org/records/10685475) |
+| fMRI Set | BOLD, ME-BOLD | [zenodo.org/records/10685458](https://zenodo.org/records/10685458) |
+| Diffusion Set | DWI, DTI | [zenodo.org/records/10685449](https://zenodo.org/records/10685449) |
+| ASL Set | pCASL | [zenodo.org/records/10685308](https://zenodo.org/records/10685308) |
+
+Each Zenodo record contains the `.exar1` protocol file (import directly into XA30) and a PDF with full acquisition parameters for translation to other software versions.
+
+See [PROTOCOLS.md](PROTOCOLS.md) for a detailed parameter summary table.
+
+---
+
+## Processing Pipelines (Containers)
+
+> **No installation required.** Pull a container and run.
+
+Docker containers for the full processing pipelines are hosted on DockerHub. See [containers/README.md](containers/README.md) for pull commands and usage instructions.
+
+---
+
+## Helper Scripts
+
+For running individual processing steps manually. Requires FSL and Python 3.8+.
+
+See [scripts/README.md](scripts/README.md) for dependencies and usage.
+
+| Script | What it does |
+|---|---|
+| `scripts/scanbids.py` | Summarise a BIDS dataset directory |
+| `scripts/fieldmap/dualecho_fieldmap.sh` | Compute fieldmap from dual-echo GRE |
+| `scripts/fieldmap/phasediff_fieldmap.sh` | Compute fieldmap from phase-difference image |
+| `scripts/preprocessing/run_fsl_flirt.py` | Linear registration using FSL FLIRT |
+| `scripts/preprocessing/run_fsl_topup.py` | Distortion correction using FSL TOPUP |
+
+---
+
+## Getting Help
+
+Use GitHub Issues to report problems or ask questions. Choose the template that fits:
+
+- **Protocol question** (parameter values, compatibility, operating mode) → [Open a protocol issue](../../issues/new?template=protocol.yml)
+- **Scanner / acquisition problem** (error on scanner, unexpected images) → [Open an acquisition issue](../../issues/new?template=acquisition.yml)
+- **Script or container bug** (code error, wrong output) → [Open a processing issue](../../issues/new?template=processing.yml)
+
+For urgent requests: [sriranga.kashyap@uhn.ca](mailto:sriranga.kashyap@uhn.ca)
+
+---
+
+## Citation
+
+If you use these protocols in your research, please cite:
+
+> Kashyap S, Xi Y, Uludağ K. *Advancing Clinical and Neuroscientific Research Through Accessible and Optimized Protocol Design at 3T.* Siemens MAGNETOM Flash, RSNA Edition, 2023.
+
+Protocol files are archived on Zenodo — see individual DOIs in the table above.
+
+---
+
+## Contributors
+
+- Sriranga Kashyap — BRAIN-TO Lab, Krembil Brain Institute, UHN
+- Yuexin Xi — PhD Student, Dept. of Medical Biophysics, University of Toronto
+
+## License
+
+See [LICENSE](LICENSE).

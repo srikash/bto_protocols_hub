@@ -1,0 +1,78 @@
+name: Processing Code Bug or Request
+description: Report a bug in a script or container, or request a new processing feature.
+title: "[Processing] "
+labels: ["processing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for problems with **scripts or Docker containers** (errors, wrong output, missing features).
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      options:
+        - Bug — script produces an error
+        - Bug — script produces wrong output
+        - Feature request — new script or option
+        - Docker container issue
+        - Documentation unclear
+    validations:
+      required: true
+
+  - type: input
+    id: script_name
+    attributes:
+      label: Script or Container Name
+      description: Which file or Docker image is affected?
+      placeholder: "e.g. scripts/fieldmap/dualecho_fieldmap.sh or braintolab/fieldmap:latest"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      placeholder: "e.g. Ubuntu 22.04, macOS 14, Windows 11 + WSL2"
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: Dependency Versions
+      description: Python version, FSL version, Docker version — whichever applies.
+      placeholder: "e.g. Python 3.11, FSL 6.0.7, Docker 25.0"
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Command You Ran
+      description: Paste the exact command.
+      render: bash
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error Output
+      description: Paste the full error message or unexpected output.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: "e.g. Script should produce a fieldmap .nii.gz in the output directory."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else that helps — data type, file structure, screenshots.

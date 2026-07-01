@@ -1,0 +1,60 @@
+name: Acquisition Problem
+description: Report a problem that occurred during scanning — unexpected images, scanner errors, or protocol import issues.
+title: "[Acquisition] "
+labels: ["acquisition"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for problems that happen **on the scanner** (import failures, unexpected scan behaviour, image quality issues).
+
+  - type: dropdown
+    id: protocol_set
+    attributes:
+      label: Protocol Set Used
+      options:
+        - Complete Set
+        - Anatomy Set
+        - fMRI Set
+        - Diffusion Set
+        - ASL Set
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: scanner_model
+    attributes:
+      label: Scanner Model and Software Version
+      description: e.g. Siemens MAGNETOM Prisma 3T, XA30A
+      placeholder: Siemens MAGNETOM Prisma 3T, XA30A
+    validations:
+      required: true
+
+  - type: input
+    id: sequence
+    attributes:
+      label: Sequence / Protocol Step
+      description: Which specific sequence or step caused the problem?
+      placeholder: "e.g. ME-BOLD EPI, or 'protocol import'"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What went wrong?
+      description: Describe the problem as specifically as possible. Include any error messages shown on the scanner console.
+      placeholder: "e.g. Scanner aborted the scan with error XYZ after 10 volumes."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: "e.g. Scan should complete without error and produce 200 volumes."
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Screenshots, log files, or anything else that helps.

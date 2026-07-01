@@ -1,0 +1,66 @@
+name: Protocol Question or Bug
+description: Report a problem with a protocol file, or ask a question about protocol parameters.
+title: "[Protocol] "
+labels: ["protocol"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for questions or problems related to the **protocol files themselves** (parameter values, compatibility, operating mode, downloading from Zenodo).
+
+  - type: dropdown
+    id: protocol_set
+    attributes:
+      label: Protocol Set
+      description: Which protocol set does this relate to?
+      options:
+        - Complete Set
+        - Anatomy Set
+        - fMRI Set
+        - Diffusion Set
+        - ASL Set
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: zenodo_doi
+    attributes:
+      label: Zenodo DOI
+      description: The DOI of the record you downloaded from (e.g. 10.5281/zenodo.10685481)
+      placeholder: 10.5281/zenodo.XXXXXXX
+
+  - type: dropdown
+    id: scanner_platform
+    attributes:
+      label: Scanner Platform
+      description: What scanner and software version are you using?
+      options:
+        - Siemens Prisma 3T — XA30
+        - Siemens Prisma 3T — VE11 or earlier
+        - Siemens Prisma 3T — other XA version
+        - Other Siemens platform
+        - Not applicable / unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What is unclear or wrong?
+      description: Describe the parameter, behaviour, or question as specifically as possible.
+      placeholder: "e.g. The TR listed in the PDF does not match what the scanner reports after import."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: "e.g. TR should be 2000 ms as stated in the paper."
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Screenshots, error messages, or anything else that helps.
