@@ -38,13 +38,15 @@ See [PROTOCOLS.md](PROTOCOLS.md) for a detailed parameter summary table.
 
 ## Processing Pipelines (Containers)
 
-> **No installation required.** Pull a container and run.
+> **Work in progress.** Containers are under active development.
 
-Docker containers for the full processing pipelines are hosted on DockerHub. See [containers/README.md](containers/README.md) for pull commands and usage instructions.
+Docker containers for the full processing pipelines will be hosted on DockerHub. See [containers/README.md](containers/README.md) for the pipeline index and usage instructions as they become available.
 
 ---
 
 ## Helper Scripts
+
+> **Work in progress.** Scripts are under active development.
 
 For running individual processing steps manually. Requires FSL and Python 3.8+.
 
@@ -76,9 +78,23 @@ For urgent requests: [sriranga.kashyap@uhn.ca](mailto:sriranga.kashyap@uhn.ca)
 
 If you use these protocols in your research, please cite:
 
-> Kashyap S, Xi Y, Uludağ K. *Advancing Clinical and Neuroscientific Research Through Accessible and Optimized Protocol Design at 3T.* Siemens MAGNETOM Flash, RSNA Edition, 2023.
+> Kashyap S, Xi, Y, Uludağ K. *Advancing Clinical and Neuroscientific Research Through Accessible and Optimized Protocol Design at 3T.* Siemens MAGNETOM Flash, RSNA Edition, 2023.
 
 Protocol files are archived on Zenodo — see individual DOIs in the table above.
+
+---
+
+## Contributing
+
+Contributions are welcome. We are particularly interested in:
+
+- **Specialised application protocols** — task-based fMRI, spectroscopy, quantitative MRI, or other sequences not covered here
+- **Protocols from other vendors** — GE, Philips, Canon, or other MRI platforms
+- **Processing scripts and pipelines** — tools that complement the existing workflows
+
+If you have protocols or code you would like to share, please open an issue or get in touch directly. We are happy to collaborate.
+
+For urgent or detailed discussions: [sriranga.kashyap@uhn.ca](mailto:sriranga.kashyap@uhn.ca)
 
 ---
 
