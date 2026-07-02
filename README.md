@@ -78,7 +78,7 @@ For urgent requests: [sriranga.kashyap@uhn.ca](mailto:sriranga.kashyap@uhn.ca)
 
 If you use these protocols in your research, please cite:
 
-> Kashyap S, Xi, Y, Uludağ K. *Advancing Clinical and Neuroscientific Research Through Accessible and Optimized Protocol Design at 3T.* Siemens MAGNETOM Flash, RSNA Edition, 2023.
+> Kashyap S, Uludağ K. *Advancing Clinical and Neuroscientific Research Through Accessible and Optimized Protocol Design at 3T.* Siemens MAGNETOM Flash, RSNA Edition, 2023.
 
 Protocol files are archived on Zenodo — see individual DOIs in the table above.
 
