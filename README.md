@@ -1,9 +1,8 @@
-# BRAIN-TO MRI Protocols
+# BRAIN-TO (BTO) MRI Protocols
 
-BRAIN-TO provides optimised MRI acquisition protocols for Siemens XA60 systems
-at 3 T and 7 T.
+Optimised MRI acquisition protocols for Siemens 3 T and 7 T systems running XA60.
 
-## Why BRAIN-TO exists
+## Motivation
 
 MRI research is becoming more collaborative while scanner time and research
 funding are under increasing pressure. Data are also being reused more often:
