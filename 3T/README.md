@@ -11,6 +11,6 @@ Zenodo; this repository does not duplicate them.
 | Diffusion | Planned | Zenodo link pending |
 | ASL | Planned | Zenodo link pending |
 
-Field-specific helper scripts are listed in [`3T_scripts/`](../3T_scripts/README.md).
+Field-specific helper scripts are listed in [`scripts/`](scripts/README.md).
 GHCR container links will be added here when images are published. Do not use
 7 T material with this catalogue.
