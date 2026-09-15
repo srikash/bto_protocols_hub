@@ -3,7 +3,7 @@
 Optimised MRI acquisition protocols for Siemens 3 T and 7 T systems running
 XA60.
 
-> **Active development:** This repository may change without notice. Consider
+> 🔴 **Active development:** This repository may change without notice. Consider
 > it complete only when this banner has been removed.
 
 ## Protocol collections
