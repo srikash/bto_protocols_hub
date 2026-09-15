@@ -5,8 +5,8 @@ XA60 systems. Choose the scanner field strength first:
 
 | Field strength | Catalogue | Status |
 |---|---|---|
-| 3 T | [3T/](3T/README.md) | Planned — protocol packages pending publication |
-| 7 T | [7T/](7T/README.md) | Planned — protocol packages pending publication |
+| 3 T | [3 T protocol page](3T/README.md) | Planned — protocol packages pending publication |
+| 7 T | [7 T protocol page](7T/README.md) | Planned — protocol packages pending publication |
 
 Each field-strength catalogue is self-contained and includes its own protocol,
 script, and container guidance. Do not combine parameters or processing tools
