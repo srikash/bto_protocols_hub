@@ -1,31 +1,84 @@
-# BRAIN-TO MRI Protocols — XA60
+# BRAIN-TO MRI Protocols
 
-This branch is the next-generation home for BRAIN-TO MRI protocols on Siemens
-XA60 systems. Choose the scanner field strength first:
+BRAIN-TO provides optimised MRI acquisition protocols for Siemens XA60 systems
+at 3 T and 7 T.
 
-| Field strength | Catalogue | Status |
+## Why BRAIN-TO exists
+
+MRI research is becoming more collaborative while scanner time and research
+funding are under increasing pressure. Data are also being reused more often:
+a control group acquired for one study may support another study, and datasets
+collected at different sites may be combined.
+
+That work depends on acquisition parameters being shared and understood. In
+practice, protocols often vary between studies at the same site. Small changes
+in resolution, timing, acceleration, reconstruction, or coil configuration can
+make data harder to compare and can affect later processing. The problem is
+larger in multi-site studies, where local scanner setups and established
+practices already differ.
+
+Access is another constraint. Hospitals and research groups may not be able to
+obtain or maintain specialised research sequences. BRAIN-TO uses Siemens
+product sequences so that collaborating sites can implement the protocols
+without Work-in-Progress packages or C2Ps.
+
+BRAIN-TO provides a stable starting point for researchers, MR physicists, and
+technologists who need dependable protocols without designing every sequence
+from scratch. The aim is consistent performance and practical reuse, rather
+than pushing individual scanner settings to their limit.
+
+## Design principles
+
+The protocol sets follow a small number of practical principles:
+
+- They use Siemens product sequences that can be shared across sites.
+- They favour isotropic voxels to support consistent spatial sampling and
+  reduce partial-voluming concerns.
+- Most scans target 5–6 minutes at 3 T and 6–8 minutes at 7 T. Multi-echo
+  FLASH, multi-shell diffusion, resting-state MRI, and functional MRI can take
+  longer where the acquisition needs it.
+- They use the acceleration available from the head coil, with variants where
+  coil configuration changes the appropriate protocol choice.
+- Data acquired with BRAIN-TO protocols have been evaluated with
+  community-standard MRI processing software.
+
+These principles support general-purpose acquisitions that can be implemented
+locally and used reliably in downstream research workflows.
+
+## Choose a protocol collection
+
+| Scanner | Protocol sets | Download |
 |---|---|---|
-| 3 T | [3 T protocol page](3T/README.md) | Planned — protocol packages pending publication |
-| 7 T | [7 T protocol page](7T/README.md) | Planned — protocol packages pending publication |
+| 3 T XA60 | Anatomy, fMRI, diffusion, ASL | [3 T protocol page](3T/README.md) · Zenodo link to be added |
+| 7 T XA60 | Anatomy, fMRI, diffusion | [7 T protocol page](7T/README.md) · Zenodo link to be added |
 
-Each field-strength catalogue is self-contained and includes its own protocol,
-script, and container guidance. Do not combine parameters or processing tools
-between the 3 T and 7 T catalogues.
+Each field-strength page describes the collection and will link directly to
+its Zenodo record.
 
-## Previous Version
+The 7 T collection does not include a product ASL protocol. If you are
+interested in 7 T ASL options, contact
+[sriranga.kashyap@utoronto.ca](mailto:sriranga.kashyap@utoronto.ca).
 
-The complete XA30 reference is preserved on the [`xa30_archive` branch](../../tree/xa30_archive).
+## Scripts and processing
 
-## Repository status
+- [3 T scripts](3T/scripts/README.md)
+- [7 T scripts](7T/scripts/README.md)
 
-XA60 protocol packages will be linked here as immutable Zenodo records when
-they are published. Until then, the field-strength and modality pages contain
-placeholders only; they are not scanner-ready protocol instructions.
+GHCR container links will be listed on the relevant field-strength page when
+they are available.
 
-The existing top-level legacy material is retained temporarily while its
-migration into the XA60 catalogues is reviewed.
+## Use in research
 
-## Citation and help
+Before using a protocol, confirm that it is appropriate for the local scanner
+configuration, coil, participant group, safety procedures, ethics approval,
+and study question. Local MR physics and technologist review remains essential.
 
-See the previous-version README for the current citation and project contact
-details while XA60 documentation is being prepared.
+## Previous version
+
+The complete XA30 protocol set is available on the
+[`xa30_archive` branch](../../tree/xa30_archive).
+
+## Contact
+
+For questions about protocol selection, implementation, or 7 T ASL options,
+email [sriranga.kashyap@utoronto.ca](mailto:sriranga.kashyap@utoronto.ca).
