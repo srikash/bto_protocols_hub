@@ -47,9 +47,8 @@ than pushing individual scanner settings to their limit.
   sites.
 - Isotropic voxels support consistent spatial sampling and reduce
   partial-voluming concerns.
-- Most scans target 5 to 6 minutes at 3 T and 6 to 8 minutes at 7 T. Multi-echo
-  FLASH, multi-shell diffusion, resting-state MRI, and functional MRI can take
-  longer where the acquisition needs it.
+- Most scans target 5 to 6 minutes at 3 T and 6 to 8 minutes at 7 T (exceptions
+  exist).
 - Coil-specific variants use the acceleration available from the head coil.
 - Data acquired with BRAIN-TO protocols have been evaluated with
   community-standard MRI processing software.
