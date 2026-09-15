@@ -64,18 +64,18 @@ Zenodo is the single source for downloadable protocol packages and their full
 acquisition parameters. The repository provides an index, practical guidance,
 and links to related tools.
 
-## Processing and data preparation
+## Recommended workflow after data acquisition
 
-[bto-docker](https://github.com/srikash/bto-docker) is a general-purpose BTO
-protocols processing container with FSL, oxasl, FreeSurfer, and supporting
-analysis scripts for ASL perfusion and structural MRI.
+1. Use [dichotomise](https://github.com/srikash/dichotomise) to check, sort,
+   rename, de-identify, and archive DICOM exports from Siemens XA60+ systems.
+2. Convert the organised data to BIDS with
+   [BIDScoin](https://github.com/Donders-Institute/bidscoin).
+3. Use [bto-docker](https://github.com/srikash/bto-docker), a general-purpose
+   BTO protocols processing container with FSL, oxasl, FreeSurfer, and
+   supporting analysis scripts for ASL perfusion and structural MRI.
 
-[dichotomise](https://github.com/srikash/dichotomise) is a command-line tool
-for checking, sorting, renaming, de-identifying, and archiving DICOM exports
-from Siemens XA60+ systems.
-
-These repositories document their own supported inputs, versions, and release
-locations. Check their README files before using them with a BRAIN-TO dataset.
+Each repository documents its supported inputs, versions, and release
+locations. Check its README before using it with a BRAIN-TO dataset.
 
 ## Help and issue reporting
 
