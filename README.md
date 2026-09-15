@@ -75,7 +75,7 @@ and study question. Local MR physics and technologist review remains essential.
 ## Previous version
 
 The complete XA30 protocol set is available on the
-[`xa30_archive` branch](../../tree/xa30_archive).
+[`xa30_archive`](../../tree/xa30_archive) branch.
 
 ## Contact
 
