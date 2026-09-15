@@ -13,7 +13,7 @@ The 3 T collection includes anatomy, fMRI, diffusion, and ASL. The 7 T
 collection includes anatomy, fMRI, and diffusion.
 
 The 7 T collection does not include a product ASL protocol. To discuss 7 T ASL
-options, email [sriranga.kashyap@utoronto.ca](mailto:sriranga.kashyap@utoronto.ca).
+options, reach out via email (see end of page).
 
 ## Motivation
 
@@ -117,5 +117,5 @@ The complete XA30 protocol set is available on the
 
 ## Contact
 
-For questions about protocol selection, implementation, or 7 T ASL options,
+For questions about protocol selection, implementation, or 7 T ASL,
 email [sriranga.kashyap@utoronto.ca](mailto:sriranga.kashyap@utoronto.ca).
